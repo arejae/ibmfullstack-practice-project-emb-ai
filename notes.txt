@@ -1,0 +1,25 @@
+python3.11
+
+from sentiment_analysis import sentiment_analyzer
+sentiment_analyzer("I love this new technology")
+
+
+import json
+from sentiment_analysis import sentiment_analyzer
+response = sentiment_analyzer("I love this new technology")
+formatted_response = json.loads(response)
+print(formatted_response)
+
+label = formatted_response['documentSentiment']['label']
+score = formatted_response['documentSentiment']['score']
+
+response = sentiment_analyzer("I hate this new technology")
+
+
+-- after package
+
+from SentimentAnalysis.sentiment_analysis import sentiment_analyzer
+sentiment_analyzer("This is fun.")
+
+-- run server
+python3.11 server.py
