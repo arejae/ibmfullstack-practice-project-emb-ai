@@ -23,3 +23,8 @@ sentiment_analyzer("This is fun.")
 
 -- run server
 python3.11 server.py
+
+--
+python3.11 -m pip install pylint
+
+pylint server.py
